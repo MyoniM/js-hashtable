@@ -8,7 +8,7 @@ class HashEntry {
 
 class HashTable {
   constructor() {
-    this.bucket = new Array();
+    this.bucket = new Array(10).fill(null);
   }
 
   _hash(key) {
@@ -19,7 +19,7 @@ class HashTable {
       hash = (hash << 5) - hash + charCode;
       hash |= 0; // Convert to 32bit integer
     }
-    return hash % this.slots;
+    return hash % this.bucket.length;
   }
 
   set(key, value) {
@@ -96,9 +96,7 @@ class HashTable {
 }
 
 const hashTable = new HashTable();
-`
-    ..set(key, value)
-    ..get(key)
-    ..remove(key)
-    ..display()
-`;
+// ..set(key, value)
+// ..get(key)
+// ..remove(key)
+// ..display()

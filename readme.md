@@ -18,8 +18,10 @@ function _hash(key) {
 }
 ```
 
-Obviously, the hashing function can't produce unique values, since int is limited to 2^32 distinct values, and there are an infinity of possible String values. This means that collisions are imminent.
+Obviously, the hashing function can't always produce unique values, since int is limited to 2^32 distinct values, and there are an infinity of possible String values. This means that collisions are imminent.
 
 To handle collisions, chaining strategy is used. Each slot of our hash table holds a pointer to another data structure(linked list).
 
 ![image showing the chaining strategy](https://www.educative.io/api/page/4910944193871872/image/download/4810203387133952)
+
+The bucket is not dynamic, it is a fixed size of ten for this implementation.
