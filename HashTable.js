@@ -95,17 +95,10 @@ class HashTable {
   }
 }
 
-const ht = new HashTable();
-ht.set("yoni", 23);
-ht.set("yoin", 22);
-ht.set("yoni", 23);
-ht.set("x", 24);
-ht.display();
-console.log(ht.get("yoni"));
-console.log(ht.get("yoin"));
-console.log(ht.remove("yoin"));
-console.log(ht.get("yoin"));
-console.log(ht.get("x"));
-console.log(ht.remove("x"));
-console.log(ht.get("x"));
-ht.display();
+const hashTable = new HashTable();
+`
+    ..set(key, value)
+    ..get(key)
+    ..remove(key)
+    ..display()
+`;
